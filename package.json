@@ -1,0 +1,20 @@
+{
+  "name": "@jsmrcaga/express-executor",
+  "version": "0.2.0",
+  "description": "A simple set of utilities to use alongside express and executor",
+  "main": "index.js",
+  "scripts": {
+    "test": "JWT_SECRET_KEY=my-super-secret JWT_ISS=issuer-one JWT_EXP=3600 mocha test --exit"
+  },
+  "author": "Jo Colina <jo@jocolina.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "sinon": "^11.1.2"
+  },
+  "peerDependencies": {
+    "@jsmrcaga/executor": "^3.0.0",
+    "express": "^4.17.1"
+  }
+}
