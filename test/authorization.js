@@ -1,13 +1,15 @@
 const { expect } = require('chai');
 const { Request, Response } = require('./utils/http');
 
-const { auth, Authorization } = require('../lib/middleware/authorization');
-const { Tokens } = require('../lib/token');
+const { Authorization } = require('../lib/middleware/authorization');
+const { tokens } = require('../lib/token');
+
+const auth = new Authorization();
 
 describe('Authorization', () => {
 	describe('Singleton/Default', () => {
 		it('Should allow token to pass', done => {
-			const token = Tokens.generate();
+			const token = tokens.generate();
 
 			request = new Request({
 				headers: {
@@ -42,7 +44,7 @@ describe('Authorization', () => {
 		});
 
 		it('Should 403 because of malformed token', done => {
-			const token = Tokens.generate();
+			const token = tokens.generate();
 			request = new Request({
 				headers: {
 					'Authorization': `Plpe ${token}`
@@ -90,7 +92,7 @@ describe('Authorization', () => {
 		});
 
 		it('Should send 403 because of .authorize()', done => {
-			const token = Tokens.generate();
+			const token = tokens.generate();
 
 			class OwnAuth extends Authorization {
 				authorize(req, token_body) {
@@ -122,7 +124,7 @@ describe('Authorization', () => {
 
 		for(const result of [42, Promise.resolve(42)]) {
 			it('Should contain result of authorization (no) promise', done => {
-				const token = Tokens.generate();
+				const token = tokens.generate();
 
 				class OwnAuth extends Authorization {
 					authorize(req, token_body) {

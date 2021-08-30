@@ -2,7 +2,7 @@ const { expect } = require('chai');
 
 const DateFreeze = require('./utils/date-freeze');
 
-const { Token, Tokens, TokenGenerator } = require('../lib/token');
+const { Token, tokens, TokenGenerator } = require('../lib/token');
 
 const secret_key = 'super-secret-key';
 const iss = 'issuer-one';

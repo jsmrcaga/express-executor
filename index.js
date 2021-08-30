@@ -1,8 +1,9 @@
 const Controller = require('./lib/controller');
 const View = require('./lib/view');
-const { auth: Auth, Authorization } = require('./lib/middleware/authorization');
-const { Token, Tokens, TokenGenerator } = require('./lib/token');
+const { Authorization } = require('./lib/middleware/authorization');
+const { Token, tokens, TokenGenerator } = require('./lib/token');
 const { GenericSerializer, DeserializationError, SerializationError } = require('./lib/serializers/serializers');
+const Errors = require('./lib/errors');
 
 const Utils = require('./lib/utils');
 
@@ -10,12 +11,12 @@ module.exports = {
 	Controller,
 	View,
 	Token,
-	Tokens,
+	tokens,
 	TokenGenerator,
 	Authorization,
-	Auth,
 	Utils,
 	GenericSerializer,
 	DeserializationError,
-	SerializationError
+	SerializationError,
+	Errors
 };
