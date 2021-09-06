@@ -4,7 +4,7 @@
   "description": "A simple set of utilities to use alongside express and executor",
   "main": "index.js",
   "scripts": {
-    "test": "JWT_SECRET_KEY=my-super-secret JWT_ISS=issuer-one JWT_EXP=3600 mocha test --exit"
+    "test": "JWT_SECRET_KEY=my-super-secret JWT_ISS=issuer-one JWT_EXP=3600 mocha test --exit --recursive"
   },
   "author": "Jo Colina <jo@jocolina.com>",
   "license": "MIT",
