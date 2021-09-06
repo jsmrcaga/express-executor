@@ -9,11 +9,12 @@ const Next = (request, response) => {
 };
 
 class Request {
-	constructor({ body = {}, headers = {}, params = {}, query = {} } = {}) {
+	constructor({ body = {}, headers = {}, params = {}, query = {}, method='GET' } = {}) {
 		this.body = body;
 		this.headers = headers;
 		this.params = params;
 		this.query = query;
+		this.method = method;
 		this.next = Next(this, null);
 	}
 
