@@ -3,10 +3,10 @@ const { expect } = require('chai');
 const _exports = require('../index');
 
 describe('Exports', () => {
-	it(`Should export every key`, () => {
-		for(const [k, v] of Object.entries(_exports)) {
+	for(const [k, v] of Object.entries(_exports)) {
+		it(`Should export ${k}`, () => {
 			expect(_exports[k]).not.to.be.undefined;
 			expect(v).not.to.be.undefined;
-		}
-	});
+		});
+	}
 });
