@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { Request, Response } = require('./utils/http');
+const { Request, Response } = require('./../testing/http');
 
 const { Authorization } = require('../lib/middleware/authorization');
 const { tokens } = require('../lib/token');

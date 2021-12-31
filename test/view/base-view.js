@@ -5,7 +5,7 @@ const { Fields } = require('@jsmrcaga/executor');
 const BaseView = require('../../lib/views/view');
 const { BaseSerializer } = require('../../lib/serializers/serializers');
 const Controller = require('../../lib/controller');
-const { Request, Response } = require('../utils/http');
+const { Request, Response } = require('../../testing/http');
 const { AuthorizationError, RequestError, DeserializationError } = require('../../lib/errors');
 
 describe('Generic View', () => {

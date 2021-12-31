@@ -1,6 +1,6 @@
 const { expect } = require('chai');
 
-const DateFreeze = require('./utils/date-freeze');
+const DateFreeze = require('./../testing/date-freeze');
 
 const { Token, tokens, TokenGenerator } = require('../lib/token');
 
