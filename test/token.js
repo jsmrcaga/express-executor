@@ -17,7 +17,7 @@ const token_generator = new TokenGenerator({
 });
 
 const now = new Date(1628514905137);
-const example_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg1MTQ5MDUsImV4cCI6MTYyODUxODUwNSwiaXNzIjoiaXNzdWVyLW9uZSIsImRhdGEiOiJwbGVwIn0.RTkwekY3M3hPOGpmQlFQeVhCL1dhOE5PYlFna2hvVS9TL3dhZ3FXekZWVT0';
+const example_token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Mjg1MTQ5MDUsImV4cCI6MTYyODUxODUwNSwiaXNzIjoiaXNzdWVyLW9uZSIsImRhdGEiOiJwbGVwIn0.E90zF73xO8jfBQPyXB_Wa8NObQgkhoU_S_wagqWzFVU';
 
 describe('Tokens', () => {
 	afterEach(() => {
