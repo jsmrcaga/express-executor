@@ -14,7 +14,7 @@
     "sinon": "^11.1.2"
   },
   "peerDependencies": {
-    "@jsmrcaga/executor": "^3.0.0",
+    "@jsmrcaga/executor": "^3.1.0",
     "express": "^4.17.1"
   }
 }
