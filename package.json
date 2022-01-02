@@ -4,7 +4,8 @@
   "description": "A simple set of utilities to use alongside express and executor",
   "main": "index.js",
   "scripts": {
-    "test": "JWT_SECRET_KEY=my-super-secret JWT_ISS=issuer-one JWT_EXP=3600 mocha test --exit --recursive"
+    "test": "docker compose run --rm app npm run mocha",
+    "mocha": "mocha test --exit --recursive"
   },
   "author": "Jo Colina <jo@jocolina.com>",
   "license": "MIT",
@@ -14,7 +15,7 @@
     "sinon": "^11.1.2"
   },
   "peerDependencies": {
-    "@jsmrcaga/executor": "^3.1.0",
+    "@jsmrcaga/executor": "^3.2.0",
     "express": "^4.17.1"
   }
 }
