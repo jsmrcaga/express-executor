@@ -182,7 +182,7 @@ describe('Generic View', () => {
 				it('400 because of hard coded error on serialize_in', done => {
 					class CustomView extends BaseView {
 						serialize_in() {
-							throw new DeserializationError('plep');
+							return Promise.reject(new DeserializationError('plep'));
 						}
 					}
 					CustomView.allowed_methods = ['post'];
