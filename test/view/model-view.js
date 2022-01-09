@@ -121,7 +121,7 @@ describe('Model View', () => {
 					expect(response.status_code).to.be.eql(200);
 					expect(Array.isArray(response.body)).to.be.true;
 					expect(response.body).to.have.length(2);
-					const ids = response.body.map(b => b._id);
+					const ids = response.body.map(b => b._id.toString());
 					expect(ids[0]).to.not.be.eql(ids[1]);
 					done();
 				});
